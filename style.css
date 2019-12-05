@@ -1,0 +1,149 @@
+                        /*GENERALE*/
+
+body {
+    width: auto;
+    margin: auto;
+}
+
+/*Trait de separation des parties*/
+hr{
+    height: 2px;
+    background-color: black;
+}
+
+                        /*HEADER*/
+
+/*Mise en forme du HEADER*/
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo_nom_prenom{
+    display: flex;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+.nom_prenom{
+    display: flex;
+    margin-left: 2px;
+    padding-top: 10px;
+}
+
+.nom_prenom p{
+    display: flex;
+    margin-left: 5px;
+}
+
+
+                        /*SECTION 1 : GBAF*/
+
+/*Centrage de l'image*/
+.illustration_banquier{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#presentation p{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
+
+/*Centrage du titre principale*/
+#presentation h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+                        /*SECTION 2 : ACTEURS*/
+
+/*Centrahe du titre*/
+.presentation_acteurs h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.presentation_acteurs p{
+    margin-left: 10px;
+}
+
+
+/*Calibrage des images*/
+#acteurs img{
+    width: 200px;
+}
+
+/*Modification du style du conteneur ACTEUR*/
+.acteur1,
+.acteur2,
+.acteur3,
+.acteur4{
+    display: flex;
+    margin: 10px;
+    padding: 1px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+/*Style des titres h2*/
+.acteur1 h3,
+.acteur2 h3,
+.acteur3 h3,
+.acteur4 h3{
+   text-align: center;
+   text-decoration: underline;
+}
+
+/*Consigne de grossissement avec flex*/
+.logo_acteur_1 ,                
+.logo_acteur_2 ,               
+.logo_acteur_3 ,                
+.logo_acteur_4 {
+    flex: 2;
+}  
+
+/*Mise en forme du titre et du texte*/
+.titre_texte_acteur1,
+.titre_texte_acteur2,
+.titre_texte_acteur3,
+.titre_texte_acteur4{
+    flex: 8;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 1px;
+}
+
+/*Position relative du conteneur du bouton*/
+.acteur1 .bouton1,
+.acteur2 .bouton2,
+.acteur3 .bouton3,
+.acteur4 .bouton4{
+    flex: 1;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+/*Positionement du bouton en absolut : bas-droite*/
+.acteur1 .bouton1 input,
+.acteur2 .bouton2 input,
+.acteur3 .bouton3 input,
+.acteur4 .bouton4 input{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    background-color: red;
+}
+
+                        /*FOOTER*/
+
+footer{
+    display: flex;
+    justify-content: center;
+}
