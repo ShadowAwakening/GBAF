@@ -1,2 +1,0 @@
-# GBAF
-Projet OCR GBAF

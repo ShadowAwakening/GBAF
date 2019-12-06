@@ -3,6 +3,8 @@
 body {
     width: auto;
     margin: auto;
+    background-color: whitesmoke;
+    font-family: serif;
 }
 
 /*Trait de separation des parties*/
@@ -85,7 +87,7 @@ header {
     margin: 10px;
     padding: 1px;
     height: 100%;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 /*Style des titres h2*/
@@ -146,4 +148,40 @@ header {
 footer{
     display: flex;
     justify-content: center;
+}
+
+                        /*MEDIA QUERRY : 600PX*/
+@media screen and (max-width: 600px) {
+    
+/*Mise en forme du HEADER pour les smartphones*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Redimenssionement de l'image SECTION 1*/
+.illustration_banquier{
+    display: block;
+    width: 350px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+   
+/*Mise en page des acteurs en colonnes SECTION 2*/
+.acteur1,
+.acteur2,
+.acteur3,
+.acteur4{
+    flex-direction: column;
+}
+    
+/*Centrage des images SECTION 2*/
+#acteurs img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+   
 }
