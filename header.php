@@ -8,7 +8,7 @@
             <p><img src="logos/logoco.png" alt="logo GBAF" /></p>
         </div>
         <div class="nom_prenom">
-            <p>Nom</p>
+            <p><?php echo $_POST['username'] ?></p>
             <p>prenom</p>
         </div>
     </div>

@@ -1,3 +1,7 @@
+<!--Condition php pour entrer sur la page-->
+<?php 
+if (isset($_POST['username']) && isset ($_POST['password']) && ($_POST['password']) == 'kangourou'){ ?>
+
 <!doctype html>
 
 <html lang="fr">
@@ -41,3 +45,11 @@
 </body>
 
 </html>
+
+<?php }else{?>
+
+    <p>Identifiant de connexion invalide. Veuillez reesayer.</p>
+    <a href="login.php">Retour a la page de connexion</a>
+<?php
+}
+?>
