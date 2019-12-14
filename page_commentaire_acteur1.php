@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!doctype html>
 
 <html lang="fr">
@@ -25,10 +29,10 @@
     <?php include "section_1.php" ?>
     <hr>
 
-    <!--    PARTIE 3 : ACTEURS -->
+    <!--    PARTIE 3 : Commentaire -->
 
-    <!--    Presentation des acteurs-->
-
+    <!--    Presentation des Commentaire-->
+    <?php include "commentaire_acteur1.php" ?>
     <!--    PARTIE 4 : FOOTER -->
 
     <!--    Mentions legales et Contact-->

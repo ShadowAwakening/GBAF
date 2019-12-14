@@ -24,18 +24,34 @@ header {
 .logo_nom_prenom{
     display: flex;
     margin-right: 5%;
-    margin-top: 3%;
+    margin-top: 1%;
+    border: 1px solid black;
 }
 
 .nom_prenom{
     display: flex;
     margin-left: 2px;
+    margin-right: 5px;
     padding-top: 10px;
+}
+
+.npdu{
+    display: flex;
+    flex-direction: column;
 }
 
 .nom_prenom p{
     display: flex;
     margin-left: 5px;
+    margin-right: 5px;
+}
+
+.deco_update{
+    margin-right: 5%;
+}
+.deco_update .update{
+    font-size: 0.6em;
+    padding-left : 3px;
 }
 
 
@@ -129,10 +145,10 @@ header {
 }
 
 /*Positionement du bouton en absolut : bas-droite*/
-.acteur1 .bouton1 input,
-.acteur2 .bouton2 input,
-.acteur3 .bouton3 input,
-.acteur4 .bouton4 input{
+.acteur1 .bouton1 a,
+.acteur2 .bouton2 a,
+.acteur3 .bouton3 a,
+.acteur4 .bouton4 a{
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -141,6 +157,8 @@ header {
     color: black;
     font-weight: bold;
     background-color: red;
+    text-decoration: none;
+    font-size: 0.7em;
 }
 
                         /*FOOTER*/
@@ -158,6 +176,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Suppression logo pour les smartphone */
+.logoco{
+    display: none;
 }
 
 /*Redimenssionement de l'image SECTION 1*/
@@ -184,4 +207,17 @@ header {
     margin-right: auto;
 }
    
+}
+
+                        /*MEDIA QUERRY : [600;928]px*/
+
+@media (min-width: 600px) and (max-width: 928px){
+ 
+/*Modification lien lire la suite pour au'ils restent sur une seul ligne*/
+.acteur1 .bouton1 a,
+.acteur2 .bouton2 a,
+.acteur3 .bouton3 a,
+.acteur4 .bouton4 a{
+    width: 80px;
+}
 }

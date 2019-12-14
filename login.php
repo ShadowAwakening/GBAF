@@ -19,32 +19,34 @@
     <div id="corp_page">
         <div id="connexion">
             <fieldset><strong>CONNEXION</strong>
-                <form action="index.php" method="POST">
-                    <p><label>Identifiant : </label><input type="text" name="username" /></p>
-                    <p><label>Mot de passe : </label><input type="password" name="password" /></p>
-                    <p><label><input type="submit" value="Valider" class="button" /></p>
-                </form>
+              <form action="page_accueil.php" method="POST">
+              <p><label>username : </label><input type="text" name="nom_utilisateur"/></p>
+              <p><label>password : </label><input type="password" name="mp"/></p>
+              <p><input type="submit" value="Envoyer"/></p>
+              <p><a href="password_lost.php">Mot de passe oublie ?</a></p>
+              </form>
             </fieldset>
         </div>
 
                             <!--    FORMULAIRE D'INSCRIPTION-->
         <div id="inscription">
             <fieldset><strong>INSCRIPTION</strong>
-                <form action="cible.php" method="POST">
-                    <p><label> Nom : </label><input type="text" name="nom" /></p>
-                    <p><label> Prenom : </label><input type="text" name="prenom" /></p>
-                    <p><label>Nom d'utilisateur : </label><input type="text" name="username" /></p>
-                    <p><label> Mot de passe : </label><input type="password" name="password" /></p>
-                    <p><label> Question : </label>
-                        <select name="question">
-                            <option selected>Quel etait le nom de votre meilleur amis d'enfance ?</option>
-                            <option>Dans quelle ville avez-vous grandit ?</option>
-                            <option>Quel etait le nom de votre premiere copine ?</option>
-                            <option>Quelle etait la marque de votre premiere voiture ?</option>
-                        </select></p>
-                    <p><label> Reponse : </label><input type="text" name="reponse" /></p>
-                    <p><label><input type="submit" value="Valider" class="button" /></p>
-                </form>
+              <form action="inscription.php" method="POST">
+                 <p><label>prenom : </label><input type="text" name="prenom"/></p>
+                 <p><label>nom : </label><input type="text" name="nom"/></p>
+                 <p><label>username : </label><input type="text" name="nom_utilisateur"/></p>
+                 <p><label> Question : </label>
+                     <select name="question">
+                         <option>Nom de votre meilleur amis d'enfance ?</option>
+                         <option>Dans quelle ville avez-vous grandit ?</option>
+                         <option>Nom de votre premiere copine ?</option>
+                         <option>Marque de votre premiere voiture ?</option>
+                     </select></p>
+                 <p><label>reponse : </label><input type="text" name="reponse"/></p>
+                 <p><label>password : </label><input type="password" name="mp"/></p>
+                 <p><label>password : </label><input type="password" name="mp_verify"/></p>
+                 <p><input type="submit" value="Envoyer"/></p>
+             </form>
             </fieldset>
         </div>
     </div>

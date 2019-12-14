@@ -26,7 +26,7 @@
                     <li>une lutte acharnée contre les freins sociétaux et les stéréotypes</li>
                 </ul>
             </div>
-            <p class="bouton1"><input type="submit" value="lire la suite" /></p>
+            <p class="bouton1"><a href="page_commentaire_acteur1.php">Lire la suite</a></p>
         </div>
 
         <div class="acteur2">
@@ -42,7 +42,7 @@
                     <li>économique : nous apportons une contribution aux activités économiques. </li>
                 </ul>
             </div>
-            <p class="bouton2"><input type="submit" value="lire la suite" /></p>
+            <p class="bouton2"><a href="page_commentaire_acteur2.php">Lire la suite</a></p>
         </div>
 
         <div class="acteur3">
@@ -57,7 +57,7 @@
                 <p>Nous les accompagnons pour voir plus grand et plus loin et proposons des solutions de financement adaptées à chaque étape de la vie des entreprises
                 </p>
             </div>
-            <p class="bouton3"><input type="submit" value="lire la suite" /></p>
+            <p class="bouton3"><a href="page_commentaire_acteur3.php">Lire la suite</a></p>
         </div>
 
         <div class="acteur4">
@@ -69,7 +69,7 @@
                 <p>La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation.</p>
                 <p>Son président est élu pour 3 ans par ses pairs, chefs d’entreprises et présidents des CDE.</p>
             </div>
-            <p class="bouton4"><input type="submit" value="lire la suite" /></p>
+            <p class="bouton4"><a href="page_commentaire_acteur4.php">Lire la suite</a></p>
         </div>
     </div>
 </section>
