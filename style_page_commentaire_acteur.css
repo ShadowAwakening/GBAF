@@ -42,60 +42,118 @@ header {
                         /*SECTION 1 : GBAF*/
 
 /*Centrage de l'image*/
-.illustration_banquier{
+.logo_acteur img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 50%;
+    height: 50%;
+    border: 1px solid black;
 }
 
-#presentation p{
-    margin-left: 10px;
-    margin-right: 10px;
+/* design titre + article acteur 1 */
+ .fco ,ul{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: justify;
+}
+
+/* design titre + article acteur 2 */
+.ppeople, .ppeople2, ul{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: justify;
+}
+
+/* design titre + article acteur 3 */
+.dsa{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: justify;
+}
+
+/* design titre + article acteur 4 */
+.cde1, .cde2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
     text-align: justify;
 }
 
 /*Centrage du titre principale*/
-#presentation h1{
+h1{
     text-align: center;
     text-decoration: underline;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    font-size: 2em;
 }
 
                         /*SECTION 2 : Commentaires*/
 
 #header_commentaire{
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    border: 1px solid black;
-
+}
+#header_commentaire h2{
+    text-decoration: underline;
 }
 
-#nouveau_commentaire{
-    border: 1px solid black;
+form{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 4px;
+    margin-bottom: 10px;
 }
 
-#avis{
+#commentaire_list{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+
+                        /* LIKES / DISLIKES */
+#like_dislike{
     display: flex;
-    border: 1px solid black;
+    align-items: center;
+    max-height: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+
 }
 
-#avis p{
+#like_dislike p{
+    padding: 2px;
+    margin: 5px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#like_dislike .dislike{
     margin-left: 5px;
-    border: 1px solid black;
 }
 
-.avis_favorable{
-    background-color: red;
+.like{
+    background-color: rgb(74, 228, 74);
     color: black;
     font-weight: bold;
 }
 
-.avis_defavorable{
-    background-color: red;
+.dislike{
+    background-color: rgb(255, 9, 9);
     color: black;
     font-weight: bold;
 }
-
-
 
 
                         /*FOOTER*/
@@ -105,8 +163,10 @@ footer{
     justify-content: center;
 }
 
-                        /*MEDIA QUERRY : 600PX*/
-@media screen and (max-width: 600px) {
+
+
+                        /*MEDIA QUERRY : 700PX*/
+@media screen and (max-width: 700px) {
     
     /*Mise en forme du HEADER pour les smartphones*/
 header {
@@ -115,13 +175,22 @@ header {
     align-items: center;
 }
 
-/*Redimenssionement de l'image SECTION 1*/
-.illustration_banquier{
-    display: block;
-    width: 350px;
-    height: 350px;
-    margin-left: auto;
-    margin-right: auto;
+h1{
+    font-size: 1em;
+} 
+
+#header_commentaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* align-items: center;
+    justify-content: space-around; */
 }
-   
+
+#like_dislike{
+    margin-top: 10px;
+    
+}
+
+ 
 }

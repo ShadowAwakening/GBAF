@@ -1,71 +1,49 @@
+<?php  
 
-<!-- 
-if(!empty($_POST['nom_utilisateur']) && !empty($_POST['mp']) && !empty($_POST['mp_verify'])){
-    // CONNEXION A LA BDD
-    try {
+if(isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_verify']) && !empty($_POST['nom_utilisateur']) && !empty($_POST['mp'] && !empty($_POST['mp_verify']))) {
+
+
+     // ESSAIE DE SE CONNECTER A LA BDD
+     try {
         $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
-    // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
+
+    // STOP LE PROCESSUS ET AFFICHE L'ERREUR S'IL Y A UN PBLM DE CONNEXION A LA BDD
     } catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());
     }
 
-    $username = $_POST['nom_utilisateur'];
+    $username = htmlspecialchars($_POST['nom_utilisateur']);
+    $mp = password_hash($_POST['mp'], PASSWORD_DEFAULT);
+    $mp_verify = password_hash($_POST['mp_verify'], PASSWORD_DEFAULT);
 
-    $update = $bdd->prepare("UPDATE membre SET password = :nouveau_mp && password_verify = nouveau_mp_verify WHERE username = :username");
-    var_dump($update);die;
+    $check = $bdd->prepare("SELECT * FROM membre WHERE username = ?");
+    $check->execute(array($username));
 
-    $update->execute(array(
-        'username' => $_POST['nom_utilisateur'],
-        'nouveau_mp' => $_POST['mp'],
-        'nouveau_mp_verify' => $_POST['mp_verify']
-    ));
+    $isexist = ($check->fetch());
+    $id = $isexist['id'];
+
+    if($isexist){
+        $update = $bdd->prepare("UPDATE membre SET passwords = :nouvelle_valeur, password_verify = :nouvelle_valeur_passvery WHERE id = $id");
+
+        $update->execute(array(
+            'nouvelle_valeur' => $mp,
+            'nouvelle_valeur_passvery' => $mp_verify
+        ));
+
+    ?>
+        <!-- JAVASCRIPT QUI AFFICHE QUE L'INSCRIPTION C'EST DEROULEE AVEC SUCCEE ET RENVOI A LA PAGE LOGIN -->
+        <script type="text/javascript"> alert('Operation reussi, vos donnees on bien ete modifie !');
+        window.location.href="login.php";
+        </script>
+
+    <?php
+        // header('Location: login.php');
+    }else{
+        echo 'Utilisateur inconnu !';
+    }
+
 }else{
-    echo'veuillez remplir les 3 champs';
-} -->
-
-<?php
-
-function modification($identifiant, $valeur){
-
-            $username = $_POST['nom_utilisateur'];
-            // CONNEXION A LA BDD
-            try {
-                $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
-            // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
-            } catch (Exception $e) {
-                die('Erreur : ' . $e->getMessage());
-            }
-            
-            // REQUETE PREPARE : PREPARATION ($req n'est pas une variable mais un objet ...)
-           
-            $update = $bdd->prepare("UPDATE membre SET $identifiant = :nouvelle_valeur WHERE username = $username");
-            // var_dump($update);die;
-
-            $update->execute(array(
-                'nouvelle_valeur' => $valeur
-            ));
-            // var_dump($update);die;
-?>
-            <!-- JAVASCRIPT QUI AFFICHE QUE L'INSCRIPTION C'EST DEROULEE AVEC SUCCEE ET RENVOI A LA PAGE LOGIN -->
-            <script type="text/javascript"> alert('Operation reussi, vos donnees on bien ete modifie !');
-            window.location.href="login.php";
-            </script>
-
-<?php
-
-        }
-
-        if(!empty($_POST['mp'])){
-            // $mp = password_hash($_POST['mp'], PASSWORD_DEFAULT);
-            modification("password", $_POST['mp']);
-        }else{
-            echo'case vide';
-        }
-        if(!empty($_POST['mp_verify'])){
-            // $mp_verify = password_hash($_POST['mp_verify'], PASSWORD_DEFAULT);
-            modification("password_verify", $_POST['mp_verify']);
-        }else{
-            echo'case vide';
-        }
+    echo'manque information';
+}
 
 ?>

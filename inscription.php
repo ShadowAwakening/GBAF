@@ -29,7 +29,7 @@ if (isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['nom_utilisa
             $mp_verify = password_hash($_POST['mp_verify'], PASSWORD_DEFAULT);
 
             // REQUETE PREPARE : PREPARATION
-            $req = $bdd->prepare("INSERT INTO membre (firstname, name, username, question, answer, password, password_verify) VALUES (:firstname, :name, :username, :question, :answer, :password,:password_verify)");
+            $req = $bdd->prepare("INSERT INTO membre (firstname, name, username, question, answer, passwords, password_verify) VALUES (:firstname, :name, :username, :question, :answer, :passwords,:password_verify)");
 
             // EXECUTION GRACE A UN ARRAY
             $req->execute(array(
@@ -38,7 +38,7 @@ if (isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['nom_utilisa
                 'username' => $nom_utilisateur,
                 'question' => $question,
                 'answer' => $reponse,
-                'password' => $mp,
+                'passwords' => $mp,
                 'password_verify' => $mp_verify
             ));
 
