@@ -22,7 +22,7 @@ function modification($identifiant, $valeur){
 ?>
             <!-- JAVASCRIPT QUI AFFICHE QUE L'INSCRIPTION C'EST DEROULEE AVEC SUCCEE ET RENVOI A LA PAGE LOGIN -->
             <script type="text/javascript"> alert('Operation reussi, vos donnees on bien ete modifie !');
-            window.location.href="page_commentaire_acteur.php?";
+            window.location.href="page_accueil.php";
             </script>
 
 <?php
@@ -46,7 +46,7 @@ function modification($identifiant, $valeur){
         }
         if(!empty($_POST['mp'])){
             $mp = password_hash($_POST['mp'], PASSWORD_DEFAULT);
-            modification("password", $mp);
+            modification("passwords", $mp);
         }
         if(!empty($_POST['mp_verify'])){
             $mp_verify = password_hash($_POST['mp_verify'], PASSWORD_DEFAULT);

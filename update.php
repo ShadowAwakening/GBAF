@@ -60,7 +60,7 @@ session_start();
     <p><input type="submit" value="Envoyer"/></p>
 
     <hr/>
-    <p><a href="page_accueil.php?id=1">Revenir a la page d'accueil</a></p>
+    <p><a href="page_accueil.php">Revenir a la page d'accueil</a></p>
 
 </body>
 </html>

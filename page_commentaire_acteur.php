@@ -52,10 +52,11 @@ if (isset($_POST['envoyer_commentaire'])) {
 
         // Stock les POST dans des variables en appliquant la fonction htmlspecialchars qui convertit les caracteres speciaux en entites HTML
         $commentaire = htmlspecialchars($_POST['commentaire']);
+        $prenom_membre = $_SESSION['prenom'];
 
         // insere les valeurs recuperer par les POST dans la table commentaires et stock dans $ins
-        $ins = $bdd->prepare("INSERT INTO commentaires (commentaire, id_article, date_commentaire) VALUES (?,?,NOW())");
-        $ins->execute(array($commentaire, $getidentifiant));
+        $ins = $bdd->prepare("INSERT INTO commentaires (commentaire, id_article, prenom_membre, date_commentaire) VALUES (?,?,?,NOW())");
+        $ins->execute(array($commentaire, $getidentifiant, $prenom_membre));
 
         // Affiche un message de validation si tout est ok
         $commentaire_message = "<span style='color:green'>Votre commentaire a bien été posté</span>";
@@ -133,7 +134,7 @@ $commentaires->execute(array($getidentifiant));
     <?php while ($commentaire = $commentaires->fetch()) { ?>
 
         <div id="commentaire_list">
-            <p><strong><?= $_SESSION['prenom']  ?>:</strong></p>
+            <p><strong><?= $commentaire['prenom_membre']  ?>:</strong></p>
             <p><?= $commentaire['date_commentaire'] ?></p>
             <p><?= $commentaire['commentaire'] ?></p>
         </div>

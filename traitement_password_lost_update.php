@@ -2,6 +2,8 @@
 
 if(isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_verify']) && !empty($_POST['nom_utilisateur']) && !empty($_POST['mp'] && !empty($_POST['mp_verify']))) {
 
+    if($_POST['mp'] == $_POST['mp_verify']){
+
 
      // ESSAIE DE SE CONNECTER A LA BDD
      try {
@@ -41,6 +43,9 @@ if(isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_v
     }else{
         echo 'Utilisateur inconnu !';
     }
+}else{
+    echo'Vos mot de passe ne correspondent pas. Reesayer';
+}
 
 }else{
     echo'manque information';
