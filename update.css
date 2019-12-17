@@ -41,8 +41,9 @@ header {
 .deco_update{
     margin-right: 5%;
 }
-.deco_update .update{
-    font-size: 0.6em;
+
+.deco_update , .update, .home{
+    font-size: 0.8em;
     padding-left : 3px;
 }
 

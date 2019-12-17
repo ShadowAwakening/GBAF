@@ -45,9 +45,10 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_
         } else {
             echo 'Utilisateur inconnu !';
         }
-    } else {
-        echo 'Vos mot de passe ne correspondent pas. Reesayer';
-    }
+    } else {?>
+        <p>Vos mot de passe ne correspondent pas entre eux ... </p>
+        <a href="password_lost.php">Retour a la page precedente</a>
+  <?php }
 } else {
     echo 'manque information';
 }

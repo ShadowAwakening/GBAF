@@ -25,7 +25,7 @@
             <p><input type="submit" value="envoyer" /></p>
         </form>
     </div>
-    <p><a href="page_accueil.php">Revenir a la page d'accueil</a></p>
+    <p><a href="login.php">Revenir a la page de login</a></p>
 
 </body>
 
