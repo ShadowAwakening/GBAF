@@ -1,10 +1,11 @@
-body{
+/* Centrage de la page */
+body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-#information_contact{
+#information_contact {
     border: 2px solid black;
     border-radius: 5px;
     width: 50%;
@@ -13,12 +14,13 @@ body{
     margin-bottom: 10px;
 }
 
-h1, h2{
+h1,
+h2 {
     text-decoration: underline;
     font-size: 2em;
 }
 
-#contact_message{
+#contact_message {
     border: 2px solid black;
     border-radius: 5px;
     width: 50%;
@@ -26,21 +28,22 @@ h1, h2{
     margin-right: auto;
 }
 
-#contact_message p{
+#contact_message p {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
 
-@media screen and (max-width: 800px){
-    form p{
+/* MEDIA : 800px */
+@media screen and (max-width: 800px) {
+    form p {
         border: 1px solid black;
         width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    input{
+    input {
 
         width: 80%;
         margin-left: auto;

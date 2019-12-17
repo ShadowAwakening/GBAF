@@ -14,8 +14,8 @@
             </div>
             <div class="deco_update">
                 <p class="update"><a href="update.php">Parametres du compte</a></p>
-                <p class="deco"><a href='deconnexion.php'><img src="logos/boutondeco.png" alt="boutondeconnexion"/></a></p>
-            </div>     
+                <p class="deco"><a href='deconnexion.php'><img src="logos/boutondeco.png" alt="boutondeconnexion" /></a></p>
+            </div>
         </div>
     </div>
 </header>

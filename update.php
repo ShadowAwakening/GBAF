@@ -13,9 +13,12 @@ session_start();
 </head>
 <body>
 
+                        <!-- HEADER -->
 <?php include "header.php"?>
 
 <hr/>
+
+                        <!-- TABLEAU -->
     <table>
     <caption>Informations actuelles</caption>
 
@@ -41,6 +44,7 @@ session_start();
 
     <hr/>
 
+    <!-- CORP DE PAGE -->
     <p class='consigne'>Utiliser le formulaire ci-dessous si vous voulez modifier vos informations :</p>
 
     <form action="traitement_update.php" method="POST">
@@ -60,6 +64,7 @@ session_start();
     <p><input type="submit" value="Envoyer"/></p>
 
     <hr/>
+    <!-- LIEN POUR REVENIR A L'ACCUEIL -->
     <p><a href="page_accueil.php">Revenir a la page d'accueil</a></p>
 
 </body>

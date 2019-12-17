@@ -21,15 +21,21 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
     $article = $bdd->prepare('SELECT * FROM articles WHERE id_article = ?');
     $article->execute(array($getidentifiant));
 
+    // Si $article n'est pas vide, il y a un commentaire, le recupere puis le stock ligne par ligne dans un array : $donnees_article
     if ($article->rowCount() == 1) {
         $donnees_article  = $article->fetch();
+        // Stock les donnees necessaires pour afficher les donnees en ligne : 136 -144
         $id_article = $donnees_article['id_article'];
         $titre_article = $donnees_article['titre_article'];
         $text_article = $donnees_article['text_article'];
         $logo_article = $donnees_article['logo_article'];
+
+        // Ajoute 1 ou retire 1 au nombre de like afficher (chiffre) -> 127
         $likes = $bdd->prepare('SELECT id FROM likes WHERE id_article = ?');
         $likes->execute(array($getidentifiant));
         $likes = $likes->rowCount();
+
+        // Ajoute 1 ou retire 1 au nombre de dislike afficher (chiffre) -> 127
         $dislikes = $bdd->prepare('SELECT id FROM dislikes WHERE id_article = ?');
         $dislikes->execute(array($getidentifiant));
         $dislikes = $dislikes->rowCount();
@@ -110,14 +116,14 @@ $commentaires->execute(array($getidentifiant));
     <div id="header_commentaire">
         <h2>Commentaires:</h2>
         <div class='formulaire_message_confirmation'>
-        <form method="POST">
-            <textarea name="commentaire" placeholder="Votre commentaire..." rows=3 cols=40></textarea><br />
-            <input type="submit" value="Poster mon commentaire" name="envoyer_commentaire" />
-        </form>
-        <!-- Certifie le bon envoi du commentaire ou affiche une erreur -->
-        <?php if (isset($commentaire_message)) {
-            echo $commentaire_message;
-        } ?>
+            <form method="POST">
+                <textarea name="commentaire" placeholder="Votre commentaire..." rows=3 cols=40></textarea><br />
+                <input type="submit" value="Poster mon commentaire" name="envoyer_commentaire" />
+            </form>
+            <!-- Certifie le bon envoi du commentaire ou affiche une erreur -->
+            <?php if (isset($commentaire_message)) {
+                                echo $commentaire_message;
+                            } ?>
         </div>
         <!--    Like / Dislike -->
         <div id="like_dislike">

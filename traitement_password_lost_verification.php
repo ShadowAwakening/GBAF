@@ -16,9 +16,9 @@ if(!empty($_POST['nom_utilisateur']) && !empty($_POST['reponse'])){
     $req = $bdd->prepare("SELECT username, question, answer FROM  membre WHERE username = :username && question = :question && answer = :answer ");
 
     $req->execute(array(
-        'username' => $_POST['nom_utilisateur'],
-        'question' => $_POST['question'],
-        'answer' => $_POST['reponse']
+        'username' => htmlspecialchars($_POST['nom_utilisateur']),
+        'question' => htmlspecialchars($_POST['question']),
+        'answer' => htmlspecialchars($_POST['reponse'])
     ));
 
     $resultat = $req-> fetch();
