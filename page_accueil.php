@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-        <!doctype html>
+<!doctype html>
 
 <html lang="fr">
 
@@ -15,29 +15,29 @@ session_start();
 </head>
 
 <body>
-                            <!--  PARTIE 1 : HEADER -->
+    <!--  PARTIE 1 : HEADER -->
 
-<!--    Header avec le logo et l'identifiant-->
+    <!--    Header avec le logo et l'identifiant-->
     <?php include "header.php" ?>
-<!--    Trait de separation des parties-->
+    <!--    Trait de separation des parties-->
     <hr>
 
-                            <!--    PARTIE 2 : PRESENTATION GBAF-->
+    <!--    PARTIE 2 : PRESENTATION GBAF-->
 
     <!--    Presentation du Groupe GBAF-->
     <?php include "section_1.php" ?>
     <hr>
 
-                            <!--    PARTIE 3 : ACTEURS -->
+    <!--    PARTIE 3 : ACTEURS -->
 
     <!--    Presentation des acteurs-->
     <?php include "section_2.php" ?>
     <hr>
 
-                            <!--    PARTIE 4 : FOOTER -->
+    <!--    PARTIE 4 : FOOTER -->
 
     <!--    Mentions legales et Contact-->
-     <?php include "footer.php" ?>
+    <?php include "footer.php" ?>
 
 
 

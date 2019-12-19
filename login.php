@@ -48,15 +48,15 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp'])) {
                     header('Location: page_accueil.php');
 
               }else{?>
-                    <p>Mauvais mot de passe :</p>
-                    <a href="login.php">Retour a la page de connexion</a>
-              <?php }
+<p>Mauvais mot de passe :</p>
+<a href="login.php">Retour a la page de connexion</a>
+<?php }
               
           }
   }else { ?>
 
-    <p>Identifiant de connexion invalide. Veuillez reesayer.</p>
-    <a href="login.php">Retour a la page de connexion</a>
+<p>Identifiant de connexion invalide. Veuillez reesayer.</p>
+<a href="login.php">Retour a la page de connexion</a>
 <?php } 
 
 }else { ?>
@@ -75,44 +75,44 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp'])) {
 
 <body>
 
-                            <!--    HEADER LOGIN -->
+    <!--    HEADER LOGIN -->
     <div id="header_page_login">
         <p><img src="logos/logoGbaf.jpg" alt="Logo GBAF" /></p>
         <p>Bienvenue sur la page de connexion a l'extranet du Groupement Banque et Assurance Francaise.</p>
     </div>
     <hr>
-                            <!--    FORMULAIRE DE CONNEXION-->
+    <!--    FORMULAIRE DE CONNEXION-->
     <div id="corp_page">
         <div id="connexion">
             <fieldset><strong>CONNEXION</strong>
-              <form action="login.php" method="POST">
-              <p><label>username : </label><input type="text" name="nom_utilisateur"/></p>
-              <p><label>password : </label><input type="password" name="mp"/></p>
-              <p><input type="submit" value="Envoyer"/></p>
-              <p><a href="password_lost.php">Mot de passe oublie ?</a></p>
-              </form>
+                <form action="login.php" method="POST">
+                    <p><label>username : </label><input type="text" name="nom_utilisateur" /></p>
+                    <p><label>password : </label><input type="password" name="mp" /></p>
+                    <p><input type="submit" value="Envoyer" /></p>
+                    <p><a href="password_lost.php">Mot de passe oublie ?</a></p>
+                </form>
             </fieldset>
         </div>
 
-                            <!--    FORMULAIRE D'INSCRIPTION-->
+        <!--    FORMULAIRE D'INSCRIPTION-->
         <div id="inscription">
             <fieldset><strong>INSCRIPTION</strong>
-              <form action="inscription.php" method="POST">
-                 <p><label>prenom : </label><input type="text" name="prenom"/></p>
-                 <p><label>nom : </label><input type="text" name="nom"/></p>
-                 <p><label>username : </label><input type="text" name="nom_utilisateur"/></p>
-                 <p><label> Question : </label>
-                     <select name="question">
-                         <option>Nom de votre meilleur amis d'enfance ?</option>
-                         <option>Dans quelle ville avez-vous grandit ?</option>
-                         <option>Nom de votre premiere copine ?</option>
-                         <option>Marque de votre premiere voiture ?</option>
-                     </select></p>
-                 <p><label>reponse : </label><input type="text" name="reponse"/></p>
-                 <p><label>password : </label><input type="password" name="mp"/></p>
-                 <p><label>password : </label><input type="password" name="mp_verify"/></p>
-                 <p><input type="submit" value="Envoyer"/></p>
-             </form>
+                <form action="inscription.php" method="POST">
+                    <p><label>prenom : </label><input type="text" name="prenom" /></p>
+                    <p><label>nom : </label><input type="text" name="nom" /></p>
+                    <p><label>username : </label><input type="text" name="nom_utilisateur" /></p>
+                    <p><label> Question : </label>
+                        <select name="question">
+                            <option>Nom de votre meilleur amis d'enfance ?</option>
+                            <option>Dans quelle ville avez-vous grandit ?</option>
+                            <option>Nom de votre premiere copine ?</option>
+                            <option>Marque de votre premiere voiture ?</option>
+                        </select></p>
+                    <p><label>reponse : </label><input type="text" name="reponse" /></p>
+                    <p><label>password : </label><input type="password" name="mp" /></p>
+                    <p><label>password : </label><input type="password" name="mp_verify" /></p>
+                    <p><input type="submit" value="Envoyer" /></p>
+                </form>
             </fieldset>
         </div>
     </div>
@@ -128,4 +128,3 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp'])) {
 </html>
 
 <?php } ?>
-    

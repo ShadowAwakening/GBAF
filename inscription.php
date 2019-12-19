@@ -45,16 +45,16 @@ if (isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['nom_utilisa
             // FERMETURE DE LA VARIABLE DE REQUETE
             $req->closeCursor();
 ?>
-            <!-- JAVASCRIPT QUI AFFICHE QUE L'INSCRIPTION C'EST DEROULEE AVEC SUCCEE ET RENVOI A LA PAGE LOGIN -->
-            <script type="text/javascript">
-                alert('Inscription reussi ! Cliquer sur ok pour revenir sur la page de connexion :');
-                window.location.href = "login.php";
-            </script>
+<!-- JAVASCRIPT QUI AFFICHE QUE L'INSCRIPTION C'EST DEROULEE AVEC SUCCEE ET RENVOI A LA PAGE LOGIN -->
+<script type="text/javascript">
+    alert('Inscription reussi ! Cliquer sur ok pour revenir sur la page de connexion :');
+    window.location.href = "login.php";
+</script>
 
-        <?php
+<?php
         } else { ?>
-            <p>Vos mot de passe ne correspondent pas, Veuillez vous enregistrer de nouveau.</p>
-            <a href="login.php"> Retour a la page de connexion</a>
+<p>Vos mot de passe ne correspondent pas, Veuillez vous enregistrer de nouveau.</p>
+<a href="login.php"> Retour a la page de connexion</a>
 
 <?php }
     } else {

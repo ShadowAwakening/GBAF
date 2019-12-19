@@ -18,7 +18,7 @@
                 <option>Nom de votre premiere copine ?</option>
                 <option>Marque de votre premiere voiture ?</option>
             </select></p>
-            <p><label>Reponse : </label><input type="text" name="reponse" /></p>
+        <p><label>Reponse : </label><input type="text" name="reponse" /></p>
         <p><input type="submit" value="Envoyer" /></p>
     </form>
 </body>

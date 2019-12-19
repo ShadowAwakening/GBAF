@@ -1,15 +1,15 @@
                         /*GENERALE*/
 
 body {
-    width: auto;
-    margin: auto;
+    width           : auto;
+    margin          : auto;
     background-color: whitesmoke;
-    font-family: serif;
+    font-family     : serif;
 }
 
 /*Trait de separation des parties*/
-hr{
-    height: 2px;
+hr {
+    height          : 2px;
     background-color: black;
 }
 
@@ -17,154 +17,183 @@ hr{
 
 /*Mise en forme du HEADER*/
 header {
-    display: flex;
-    justify-content: space-between;
+    display              : -webkit-box;
+    display              : -ms-flexbox;
+    display              : flex;
+    -webkit-box-pack     : justify;
+    -ms-flex-pack        : justify;
+    justify-content      : space-between;
 }
 
-.logo_nom_prenom{
-    display: flex;
-    margin-right: 5%;
-    margin-top: 1%;
+.logo_nom_prenom {
+    display              : -webkit-box;
+    display              : -ms-flexbox;
+    display              : flex;
+    margin-right         : 5%;
+    margin-top           : 1%;
 }
 
-.nom_prenom{
-    display: flex;
-    margin-left: 2px;
-    margin-right: 5px;
-    padding-top: 10px;
+.nom_prenom {
+    display              : -webkit-box;
+    display              : -ms-flexbox;
+    display              : flex;
+    margin-left          : 2px;
+    margin-right         : 5px;
+    padding-top          : 10px;
 }
 
-.npdu{
-    display: flex;
-    flex-direction: column;
+.npdu {
+    display              : -webkit-box;
+    display              : -ms-flexbox;
+    display              : flex;
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
 }
 
-.nom_prenom p{
-    display: flex;
-    margin-left: 5px;
-    margin-right: 5px;
+.nom_prenom p {
+    display              : -webkit-box;
+    display              : -ms-flexbox;
+    display              : flex;
+    margin-left          : 5px;
+    margin-right         : 5px;
 }
 
-.deco_update{
-    margin-right: 5%;
+.deco_update {
+    margin-right         : 5%;
 }
-.deco_update , .update, .home{
-    font-size: 0.8em;
-    padding-left : 3px;
+
+.deco_update,
+.update,
+.home {
+    font-size            : 0.8em;
+    padding-left         : 3px;
 }
 
 
                         /*SECTION 1 : GBAF*/
 
 /*Centrage de l'image*/
-.illustration_banquier{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.illustration_banquier {
+    display        : block;
+    margin-left    : auto;
+    margin-right   : auto;
 }
 
-#presentation p{
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: justify;
+#presentation p {
+    margin-left    : 10px;
+    margin-right   : 10px;
+    text-align     : justify;
 }
 
 /*Centrage du titre principale*/
-#presentation h1{
-    text-align: center;
+#presentation h1 {
+    text-align     : center;
     text-decoration: underline;
 }
 
                         /*SECTION 2 : ACTEURS*/
-
 /*Centrahe du titre*/
-.presentation_acteurs h2{
-    text-align: center;
+.presentation_acteurs h2 {
+    text-align     : center;
     text-decoration: underline;
 }
 
-.presentation_acteurs p{
-    margin-left: 10px;
+.presentation_acteurs p {
+    margin-left    : 10px;
 }
 
 
 /*Calibrage des images*/
-#acteurs img{
-    width: 200px;
+#acteurs img {
+    width          : 200px;
 }
 
 /*Modification du style du conteneur ACTEUR*/
 .acteur1,
 .acteur2,
 .acteur3,
-.acteur4{
-    display: flex;
-    margin: 10px;
-    padding: 1px;
-    height: 100%;
-    border: 2px solid black;
+.acteur4 {
+    display                         : -webkit-box;
+    display                         : -ms-flexbox;
+    display                         : flex;
+    margin                          : 10px;
+    padding                         : 1px;
+    height                          : 100%;
+    border                          : 2px solid black;
 }
 
 /*Style des titres h2*/
 .acteur1 h3,
 .acteur2 h3,
 .acteur3 h3,
-.acteur4 h3{
-   text-align: center;
-   text-decoration: underline;
+.acteur4 h3 {
+    text-align                      : center;
+    text-decoration                 : underline;
 }
 
 /*Consigne de grossissement avec flex*/
-.logo_acteur_1 ,                
-.logo_acteur_2 ,               
-.logo_acteur_3 ,                
+.logo_acteur_1,
+.logo_acteur_2,
+.logo_acteur_3,
 .logo_acteur_4 {
-    flex: 2;
-}  
+    -webkit-box-flex                : 2;
+    -ms-flex                        : 2;
+    flex                            : 2;
+}
 
 /*Mise en forme du titre et du texte*/
 .titre_texte_acteur1,
 .titre_texte_acteur2,
 .titre_texte_acteur3,
-.titre_texte_acteur4{
-    flex: 8;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding: 1px;
+.titre_texte_acteur4 {
+    -webkit-box-flex                : 8;
+    -ms-flex                        : 8;
+    flex                            : 8;
+    margin-right                    : 10px;
+    margin-left                     : 10px;
+    padding                         : 1px;
 }
 
 /*Position relative du conteneur du bouton*/
 .acteur1 .bouton1,
 .acteur2 .bouton2,
 .acteur3 .bouton3,
-.acteur4 .bouton4{
-    flex: 1;
-    position: relative;
-    margin-bottom: 0px;
+.acteur4 .bouton4 {
+    -webkit-box-flex                : 1;
+    -ms-flex                        : 1;
+    flex                            : 1;
+    position                        : relative;
+    margin-bottom                   : 0px;
 }
 
-/*Positionement du bouton en absolut : bas-droite*/
+/*Positionement du bouton en absolut: bas-droite*/
 .acteur1 .bouton1 a,
 .acteur2 .bouton2 a,
 .acteur3 .bouton3 a,
-.acteur4 .bouton4 a{
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    border: 1px solid black;
-    border-radius: 5px;
-    color: black;
-    font-weight: bold;
-    background-color: red;
-    text-decoration: none;
-    font-size: 0.7em;
+.acteur4 .bouton4 a {
+    position                        : absolute;
+    bottom                          : 0px;
+    right                           : 0px;
+    border                          : 1px solid black;
+    border-radius                   : 5px;
+    color                           : black;
+    font-weight                     : bold;
+    background-color                : red;
+    text-decoration                 : none;
+    font-size                       : 0.7em;
 }
 
                         /*FOOTER*/
 
-footer{
-    display: flex;
-    justify-content: center;
+footer {
+    display         : -webkit-box;
+    display         : -ms-flexbox;
+    display         : flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack   : center;
+    justify-content : center;
 }
 
                         /*MEDIA QUERRY : 600PX*/
@@ -172,38 +201,48 @@ footer{
     
 /*Mise en forme du HEADER pour les smartphones*/
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display              : -webkit-box;
+    display              : -ms-flexbox;
+    display              : flex;
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
+    -webkit-box-align    : center;
+    -ms-flex-align       : center;
+    align-items          : center;
 }
 
 /* Suppression logo pour les smartphone */
-.logoco{
-    display: none;
+.logoco {
+    display              : none;
 }
 
 /*Redimenssionement de l'image SECTION 1*/
-.illustration_banquier{
-    display: block;
-    width: 350px;
-    height: 350px;
-    margin-left: auto;
-    margin-right: auto;
+.illustration_banquier {
+    display              : block;
+    width                : 350px;
+    height               : 350px;
+    margin-left          : auto;
+    margin-right         : auto;
 }
-   
+
 /*Mise en page des acteurs en colonnes SECTION 2*/
 .acteur1,
 .acteur2,
 .acteur3,
-.acteur4{
-    flex-direction: column;
+.acteur4 {
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
 }
-    
+
 /*Centrage des images SECTION 2*/
-#acteurs img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#acteurs img {
+    display              : block;
+    margin-left          : auto;
+    margin-right         : auto;
 }
    
 }
@@ -216,7 +255,7 @@ header {
 .acteur1 .bouton1 a,
 .acteur2 .bouton2 a,
 .acteur3 .bouton3 a,
-.acteur4 .bouton4 a{
+.acteur4 .bouton4 a {
     width: 80px;
 }
 }

@@ -127,9 +127,11 @@ $commentaires->execute(array($getidentifiant));
         </div>
         <!--    Like / Dislike -->
         <div id="like_dislike">
-            <p class='like'>(<?= $likes ?>)<a href="like_dislike.php?t=1&id=<?= $getidentifiant ?>"><img src="image/like.png" /></a></p>
+            <p class='like'>(<?= $likes ?>)<a href="like_dislike.php?t=1&id=<?= $getidentifiant ?>"><img
+                        src="image/like.png" /></a></p>
 
-            <p class='dislike'>(<?= $dislikes ?>)<a href="like_dislike.php?t=2&id=<?= $getidentifiant ?>"><img src="image/dislike.png" /></a></p>
+            <p class='dislike'>(<?= $dislikes ?>)<a href="like_dislike.php?t=2&id=<?= $getidentifiant ?>"><img
+                        src="image/dislike.png" /></a></p>
         </div>
     </div>
 
@@ -139,11 +141,11 @@ $commentaires->execute(array($getidentifiant));
     <!-- Affiche les commentaire du plus recent au plus vieux -->
     <?php while ($commentaire = $commentaires->fetch()) { ?>
 
-        <div id="commentaire_list">
-            <p><strong><?= $commentaire['prenom_membre']  ?>:</strong></p>
-            <p><?= $commentaire['date_commentaire'] ?></p>
-            <p><?= $commentaire['commentaire'] ?></p>
-        </div>
+    <div id="commentaire_list">
+        <p><strong><?= $commentaire['prenom_membre']  ?>:</strong></p>
+        <p><?= $commentaire['date_commentaire'] ?></p>
+        <p><?= $commentaire['commentaire'] ?></p>
+    </div>
 
     <?php } ?>
 

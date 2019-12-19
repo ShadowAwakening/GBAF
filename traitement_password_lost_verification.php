@@ -27,14 +27,14 @@ if(!empty($_POST['nom_utilisateur']) && !empty($_POST['reponse'])){
     if(!$resultat){
         echo'Information erronees';
     }else{?>
-        <h2>Taper votre nouveau mot de passe et confirmer le :</h2>
-        <form action="traitement_password_lost_update.php" method="POST">
-        <p><label>username : </label><input type="text" name="nom_utilisateur" /></p>
-        <p><label>password : </label><input type="password" name="mp"/></p>
-    <p><label>password verify : </label><input type="password" name="mp_verify"/></p>
-    <p><input type="submit" value="Envoyer"/></p>
-    </form>
-    <?php }
+<h2>Taper votre nouveau mot de passe et confirmer le :</h2>
+<form action="traitement_password_lost_update.php" method="POST">
+    <p><label>username : </label><input type="text" name="nom_utilisateur" /></p>
+    <p><label>password : </label><input type="password" name="mp" /></p>
+    <p><label>password verify : </label><input type="password" name="mp_verify" /></p>
+    <p><input type="submit" value="Envoyer" /></p>
+</form>
+<?php }
 
 }
 ?>

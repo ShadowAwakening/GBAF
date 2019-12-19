@@ -34,11 +34,11 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_
             ));
 
 ?>
-            <!-- JAVASCRIPT QUI AFFICHE QUE L'INSCRIPTION C'EST DEROULEE AVEC SUCCEE ET RENVOI A LA PAGE LOGIN -->
-            <script type="text/javascript">
-                alert('Operation reussi, vos donnees on bien ete modifie !');
-                window.location.href = "login.php";
-            </script>
+<!-- JAVASCRIPT QUI AFFICHE QUE L'INSCRIPTION C'EST DEROULEE AVEC SUCCEE ET RENVOI A LA PAGE LOGIN -->
+<script type="text/javascript">
+    alert('Operation reussi, vos donnees on bien ete modifie !');
+    window.location.href = "login.php";
+</script>
 
 <?php
             // header('Location: login.php');
@@ -46,9 +46,9 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_
             echo 'Utilisateur inconnu !';
         }
     } else {?>
-        <p>Vos mot de passe ne correspondent pas entre eux ... </p>
-        <a href="password_lost.php">Retour a la page precedente</a>
-  <?php }
+<p>Vos mot de passe ne correspondent pas entre eux ... </p>
+<a href="password_lost.php">Retour a la page precedente</a>
+<?php }
 } else {
     echo 'manque information';
 }
