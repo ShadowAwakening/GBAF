@@ -5,10 +5,7 @@
 
         <h2>Voici la liste des acteurs et partenaires</h2>
 
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
-            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
-            sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
-            facilis est et expedita distinctio.</p>
+        <p>Vous trouverez dans la section ci-dessous un récapitulatif des partenaires financiers du groupe. En cliquant sur le bouton rouge <em>"Lire la suite"</em> vous aurez accès à une nouvelle page contenant les informations détaillées du partenaire en question. Vous aurez également la possibilité d'ajouter un commentaire et de liker ou disliker le partenaire. N'hésitez pas à nous donner votre avis en laissant des commentaires constructifs et détaillés !</p>
     </div>
 
     <!--        Liste des acteurs-->

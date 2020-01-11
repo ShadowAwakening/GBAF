@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="utf-8">
 
-    <title>Extranet Groupement Banquaire et Assurance Francaise</title>
+    <title>Page d'accueil Extranet Groupement Banquaire et Assurance Francaise</title>
     <meta name="description" content="Page d'accueil de l'extranet du Groupement Banque et Assurance Francaise">
     <link rel="stylesheet" href="style.css">
 
@@ -43,4 +43,4 @@ session_start();
 
 </body>
 
-</html>
+</html> 

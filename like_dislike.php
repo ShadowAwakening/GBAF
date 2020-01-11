@@ -5,7 +5,7 @@ session_start();
 
 // Essaie de se connecter a la BDD
 try {
-    $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+   require "config.php";
 
 // Stop le processus et affiche l'erreur si pblm de connexion a la BDD
 } catch (Exception $e) {

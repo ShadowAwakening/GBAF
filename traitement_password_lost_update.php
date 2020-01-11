@@ -8,7 +8,7 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_
 
         // ESSAIE DE SE CONNECTER A LA BDD
         try {
-            $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+            require "config.php";
 
             // STOP LE PROCESSUS ET AFFICHE L'ERREUR S'IL Y A UN PBLM DE CONNEXION A LA BDD
         } catch (Exception $e) {
@@ -36,7 +36,7 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_
 ?>
 <!-- JAVASCRIPT QUI AFFICHE QUE L'INSCRIPTION C'EST DEROULEE AVEC SUCCEE ET RENVOI A LA PAGE LOGIN -->
 <script type="text/javascript">
-    alert('Operation reussi, vos donnees on bien ete modifie !');
+    alert('Opération réussi, vos données ont bien été modifiée !');
     window.location.href = "login.php";
 </script>
 
@@ -50,7 +50,7 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_
 <a href="password_lost.php">Retour a la page precedente</a>
 <?php }
 } else {
-    echo 'manque information';
+    echo 'Manque informations';
 }
 
 ?>

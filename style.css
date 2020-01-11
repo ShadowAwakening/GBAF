@@ -13,6 +13,112 @@ hr {
     background-color: black;
 }
 
+/* Mise en forme formulaire de changement de mot de passe */
+.formPassLost{
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgb(255, 251, 39); */
+    font-weight: bold;
+    padding: 10px;
+}
+
+.formPassLost h2{
+
+    font-weight: bold;
+    font-size: 1.5em;
+    /* text-decoration: underline; */
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: greenyellow;
+    margin: 5px;
+    padding: 2px;
+}
+ 
+.formPassLost .btn-primary{
+
+
+    border-radius: 25px;
+
+}
+
+
+/* Mise en forme formulaires login */
+.formLog{
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgb(255, 251, 39); */
+    font-weight: bold;
+    padding: 10px;
+}
+
+.formLog h2{
+
+    font-weight: bold;
+    font-size: 1.5em;
+    /* text-decoration: underline; */
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: greenyellow;
+    margin: 5px;
+    padding: 2px;
+}
+ 
+.formLog .btn-primary{
+
+
+    border-radius: 25px;
+
+}
+
+.infosContact{
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgb(255, 251, 39); */
+    font-weight: bold;
+    padding: 10px;
+}
+
+.infosContact h2{
+
+    font-weight: bold;
+    font-size: 1.5em;
+    /* text-decoration: underline; */
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: greenyellow;
+    margin: 5px;
+    padding: 2px;
+}
+ 
+.infosContact .btn-primary{
+
+
+    border-radius: 25px;
+}
+
+.infosContact strong{
+
+    font-style: italic;
+    text-decoration: underline;
+}
                         /*HEADER*/
 
 /*Mise en forme du HEADER*/
@@ -25,6 +131,10 @@ header {
     justify-content      : space-between;
 }
 
+#header_page_login {
+    text-align: center;
+}
+
 .logo_nom_prenom {
     display              : -webkit-box;
     display              : -ms-flexbox;
@@ -32,6 +142,7 @@ header {
     margin-right         : 5%;
     margin-top           : 1%;
 }
+
 
 .nom_prenom {
     display              : -webkit-box;
@@ -67,7 +178,7 @@ header {
 .deco_update,
 .update,
 .home {
-    font-size            : 0.8em;
+    font-size            : 1em;
     padding-left         : 3px;
 }
 
@@ -91,6 +202,67 @@ header {
 #presentation h1 {
     text-align     : center;
     text-decoration: underline;
+}
+
+/*Centrage de l'image*/
+.logo_acteur img {
+    display        : block;
+    margin-left    : auto;
+    margin-right   : auto;
+    width          : 50%;
+    height         : 50%;
+    border         : 1px solid black;
+}
+/* Section 1 commentaire acteur */
+
+/* design titre + article acteur 1 */
+.fco,
+.lienfco,
+ul {
+    margin-left    : auto;
+    margin-right   : auto;
+    width          : 70%;
+    text-align     : justify;
+}
+
+/* design titre + article acteur 2 */
+.ppeople,
+.ppeople2,
+.lienppeople,
+ul {
+    margin-left    : auto;
+    margin-right   : auto;
+    width          : 70%;
+    text-align     : justify;
+}
+
+/* design titre + article acteur 3 */
+.dsa {
+    margin-left    : auto;
+    margin-right   : auto;
+    width          : 70%;
+    text-align     : justify;
+}
+
+/* design titre + article acteur 4 */
+.cde1,
+.cde2,
+.liencde {
+    margin-left    : auto;
+    margin-right   : auto;
+    width          : 70%;
+    text-align     : justify;
+}
+
+/*Centrage du titre principale*/
+h1 {
+    text-align     : center;
+    text-decoration: underline;
+    display        : block;
+    margin-left    : auto;
+    margin-right   : auto;
+    width          : 50%;
+    font-size      : 2em;
 }
 
                         /*SECTION 2 : ACTEURS*/
@@ -185,6 +357,79 @@ header {
     font-size                       : 0.7em;
 }
 
+
+/*SECTION 2 : Commentaires*/
+
+#header_commentaire {
+    display          : -webkit-box;
+    display          : -ms-flexbox;
+    display          : flex;
+    -webkit-box-align: center;
+    -ms-flex-align   : center;
+    align-items      : center;
+    -ms-flex-pack    : distribute;
+    justify-content  : space-around;
+}
+
+#header_commentaire h2 {
+    text-decoration  : underline;
+}
+
+.formulaire_message_confirmation {
+    border           : 2px solid black;
+    border-radius    : 5px;
+    padding          : 4px;
+    margin-bottom    : 10px;
+}
+
+#commentaire_list {
+    border           : 1px solid black;
+    border-radius    : 5px;
+    margin-bottom    : 2px;
+    margin-top       : 5px;
+    padding-left     : 5px;
+}
+
+
+                        /* LIKES / DISLIKES */
+#like_dislike {
+    display          : -webkit-box;
+    display          : -ms-flexbox;
+    display          : flex;
+    -webkit-box-align: center;
+    -ms-flex-align   : center;
+    align-items      : center;
+    max-height       : 50px;
+    border           : 2px solid black;
+    border-radius    : 5px;
+
+}
+
+#like_dislike p {
+    padding          : 2px;
+    margin           : 5px;
+    height           : 30px;
+    border           : 2px solid black;
+    border-radius    : 5px;
+}
+
+#like_dislike .dislike {
+    margin-left      : 5px;
+}
+
+.like {
+    background-color : rgb(74, 228, 74);
+    color            : black;
+    font-weight      : bold;
+}
+
+.dislike {
+    background-color : rgb(255, 9, 9);
+    color            : black;
+    font-weight      : bold;
+}
+                        
+
                         /*FOOTER*/
 
 footer {
@@ -194,6 +439,49 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack   : center;
     justify-content : center;
+}
+
+/*MEDIA QUERRY : 700PX*/
+@media screen and (max-width: 700px) {
+
+
+h1 {
+    font-size            : 1em;
+}
+
+#header_commentaire {
+    display              : -webkit-box;
+    display              : -ms-flexbox;
+    display              : flex;
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
+    -webkit-box-align    : center;
+    -ms-flex-align       : center;
+    align-items          : center;
+    /* align-items       : center;
+    justify-content      : space-around; */
+}
+
+
+.logo_acteur img{
+
+    display        : block;
+    margin-left    : auto;
+    margin-right   : auto;
+    width          : 50%;
+    height         : 50%;
+    border         : 1px solid black
+}
+
+
+#like_dislike {
+    margin-top           : 10px;
+
+}
+
+    
 }
 
                         /*MEDIA QUERRY : 600PX*/
@@ -213,10 +501,15 @@ header {
     align-items          : center;
 }
 
-/* Suppression logo pour les smartphone */
-.logoco {
-    display              : none;
+
+.logo_nom_prenom {
+   text-align: center;
 }
+
+.nom_prenom{
+    justify-content: center;
+}
+
 
 /*Redimenssionement de l'image SECTION 1*/
 .illustration_banquier {
@@ -225,7 +518,7 @@ header {
     height               : 350px;
     margin-left          : auto;
     margin-right         : auto;
-}
+} 
 
 /*Mise en page des acteurs en colonnes SECTION 2*/
 .acteur1,
@@ -244,7 +537,57 @@ header {
     margin-left          : auto;
     margin-right         : auto;
 }
-   
+
+/* Diminution taille des textes h2 et label sur petits ecrans  */
+.formPassLost h2{
+    font-size: 1em;
+    padding: 5px;
+
+}
+
+.formPassLost label
+{
+    font-size: 0.7em;
+}
+
+.formLog h2
+{
+    font-size: 1em;
+    padding: 5px;
+
+}
+
+.formLog label
+{
+    font-size: 0.7em;
+}
+
+.infosContact h2
+{
+    font-size: 1em;
+    padding: 5px;
+}
+
+.infosContact label
+{
+    font-size: 0.7em;
+}
+
+.infosContact p
+{
+    font-size: 0.7em;
+}
+
+.table-info th,
+.table-donnees td
+
+{
+    font-size: 0.7em;
+    border: 1px solid black;
+}
+
+option{
+    font-size: 0.6em;
 }
 
                         /*MEDIA QUERRY : [600;928]px*/
@@ -257,5 +600,22 @@ header {
 .acteur3 .bouton3 a,
 .acteur4 .bouton4 a {
     width: 80px;
-}
-}
+ }
+
+} 
+
+@media (min-width: 350px) and (max-width: 450px){
+ 
+    .table-info th,
+    .table-donnees td
+    
+    {
+        font-size: 0.5em;
+        border: 1px solid black;
+    }
+    
+    
+    }
+
+
+}  

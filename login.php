@@ -8,7 +8,8 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp'])) {
 
             // CONNEXION A LA BDD
             try {
-                $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+
+                require "config.php";
             // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
             } catch (Exception $e) {
                 die('Erreur : ' . $e->getMessage());
@@ -49,13 +50,13 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp'])) {
 
               }else{?>
 <p>Mauvais mot de passe :</p>
-<a href="login.php">Retour a la page de connexion</a>
+<a href="login.php">Retour à la page de connexion</a>
 <?php }
               
           }
   }else { ?>
 
-<p>Identifiant de connexion invalide. Veuillez reesayer.</p>
+<p>Identifiants de connexion invalide. Veuillez reesayer.</p>
 <a href="login.php">Retour a la page de connexion</a>
 <?php } 
 
@@ -70,52 +71,83 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp'])) {
 <head>
     <meta charset="utf-8">
     <title>Identification extranet GBAF</title>
-    <link rel="stylesheet" href="style_login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!--    HEADER LOGIN -->
-    <div id="header_page_login">
+    <div id="header_page_login"> 
         <p><img src="logos/logoGbaf.jpg" alt="Logo GBAF" /></p>
-        <p>Bienvenue sur la page de connexion a l'extranet du Groupement Banque et Assurance Francaise.</p>
+        <p>Bienvenue sur la page de connexion à l'extranet du Groupement Banque et Assurance Francaise.</p>
     </div>
     <hr>
     <!--    FORMULAIRE DE CONNEXION-->
-    <div id="corp_page">
-        <div id="connexion">
-            <fieldset><strong>CONNEXION</strong>
-                <form action="login.php" method="POST">
-                    <p><label>username : </label><input type="text" name="nom_utilisateur" /></p>
-                    <p><label>password : </label><input type="password" name="mp" /></p>
-                    <p><input type="submit" value="Envoyer" /></p>
-                    <p><a href="password_lost.php">Mot de passe oublie ?</a></p>
-                </form>
-            </fieldset>
-        </div>
+
+        <div class="container formLog">
+        <h2>Connexion :</h2>
+        <form action="login.php" method="POST">
+            <div class="form-group">
+                <label>Nom d'utilisateur :</label>
+                <input type="text" name="nom_utilisateur" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Nouveau mot de passe :</label>
+                <input type="password" name="mp" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label><a href="password_lost.php">Mot de passe oublié</a></label> 
+</div>
+            <button type="submit" class="btn btn-primary">Connexion</button>
+        </form> 
+    </div>
+    <hr>
+
+
 
         <!--    FORMULAIRE D'INSCRIPTION-->
-        <div id="inscription">
-            <fieldset><strong>INSCRIPTION</strong>
-                <form action="inscription.php" method="POST">
-                    <p><label>prenom : </label><input type="text" name="prenom" /></p>
-                    <p><label>nom : </label><input type="text" name="nom" /></p>
-                    <p><label>username : </label><input type="text" name="nom_utilisateur" /></p>
-                    <p><label> Question : </label>
-                        <select name="question">
-                            <option>Nom de votre meilleur amis d'enfance ?</option>
-                            <option>Dans quelle ville avez-vous grandit ?</option>
-                            <option>Nom de votre premiere copine ?</option>
-                            <option>Marque de votre premiere voiture ?</option>
-                        </select></p>
-                    <p><label>reponse : </label><input type="text" name="reponse" /></p>
-                    <p><label>password : </label><input type="password" name="mp" /></p>
-                    <p><label>password : </label><input type="password" name="mp_verify" /></p>
-                    <p><input type="submit" value="Envoyer" /></p>
-                </form>
-            </fieldset>
-        </div>
+
+    <div class="container formLog">
+        <h2>Inscription :</h2>
+        <form action="inscription.php" method="POST">
+            <div class="form-group">
+                <label>Prénom :</label>
+                <input type="text" name="prenom" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Nom :</label>
+                <input type="text" name="nom" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Nom d'utilisateur :</label>
+                <input type="text" name="nom_utilisateur" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Question :</label>
+                    <select name="question" class="form-control">>
+                        <option>Nom de votre meilleur amis d'enfance ?</option>
+                        <option>Dans quelle ville avez-vous grandit ?</option>
+                        <option>Nom de votre premiere copine ?</option>
+                        <option>Marque de votre première voiture ?</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label>Réponse :</label>
+                <input type="text" name="reponse" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Mot de passe :</label>
+                <input type="password" name="mp" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Vérification mot de passe :</label>
+                <input type="password" name="mp_verify" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Inscription</button>
+        </form>
     </div>
+    <hr>
 
     <!--    Mentions legales et Contact-->
     <footer>

@@ -11,7 +11,7 @@ if (isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['nom_utilisa
 
             // ESSAIE DE SE CONNECTER A LA BDD
             try {
-                $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+                require "config.php";;
 
                 // STOP LE PROCESSUS ET AFFICHE L'ERREUR S'IL Y A UN PBLM DE CONNEXION A LA BDD
             } catch (Exception $e) {
@@ -47,13 +47,13 @@ if (isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['nom_utilisa
 ?>
 <!-- JAVASCRIPT QUI AFFICHE QUE L'INSCRIPTION C'EST DEROULEE AVEC SUCCEE ET RENVOI A LA PAGE LOGIN -->
 <script type="text/javascript">
-    alert('Inscription reussi ! Cliquer sur ok pour revenir sur la page de connexion :');
+    alert('Inscription réussie ! Cliquer sur ok pour revenir sur la page de connexion :');
     window.location.href = "login.php";
 </script>
 
 <?php
         } else { ?>
-<p>Vos mot de passe ne correspondent pas, Veuillez vous enregistrer de nouveau.</p>
+<p>Vos mots de passe ne correspondent pas, Veuillez vous enregistrer de nouveau.</p>
 <a href="login.php"> Retour a la page de connexion</a>
 
 <?php }

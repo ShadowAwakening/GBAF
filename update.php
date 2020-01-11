@@ -9,8 +9,10 @@ session_start();
 
 <head>
     <meta charset="utf-8">
-    <title>Update Account</title>
-    <link rel="stylesheet" href="update.css">
+    <title>Modification des données utilisateur</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,53 +20,80 @@ session_start();
     <!-- HEADER -->
     <?php include "header.php"?>
 
+    <hr /> 
+
+    <table class="table table-bordered">
+  <thead>
+    <tr class="table-info">
+      <th scope="col">Prénom</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Nom d'utilisateur</th>
+      <th scope="col">Question</th>
+      <th scope="col">Réponse</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-donnees">
+      <td><?= $_SESSION['prenom']; ?></td>
+      <td><?= $_SESSION['nom']; ?></td>
+      <td><?= $_SESSION['username']; ?></td>
+      <td><?= $_SESSION['question']; ?></td>
+      <td><?= $_SESSION['answer']; ?></td>
+    </tr>
+  </tbody>
+</table>
+ 
     <hr />
 
-    <!-- TABLEAU -->
-    <table>
-        <caption>Informations actuelles</caption>
+<!-- Formulaire de modification d'information -->
+        <div class="container formLog">
+        <h2>Modification informations :</h2>
+        <form action="traitement_update.php" method="POST">
+            <div class="form-group">
+                <label>Prénom :</label>
+                <input type="text" name="prenom" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Nom :</label>
+                <input type="text" name="nom" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Nom d'utilisateur :</label>
+                <input type="text" name="nom_utilisateur" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Question :</label>
+                    <select name="question" class="form-control">>
+                        <option>Nom de votre meilleur amis d'enfance ?</option>
+                        <option>Dans quelle ville avez-vous grandit ?</option>
+                        <option>Nom de votre premiere copine ?</option>
+                        <option>Marque de votre premiere voiture ?</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label>Réponse :</label>
+                <input type="text" name="reponse" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Mot de passe :</label>
+                <input type="password" name="mp" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Vérification mot de passe :</label>
+                <input type="password" name="mp_verify" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Modifier</button>
+        </form> 
+    </div>
+    <hr>
 
-        <tr>
-            <th>Prenom</th>
-            <th>Nom</th>
-            <th>Username</th>
-            <th>Question</th>
-            <th>Reponse</th>
-        </tr>
-        <tr>
-            <td><?php echo $_SESSION['prenom']; ?></td>
-            <td><?php echo $_SESSION['nom']; ?></td>
-            <td><?php echo $_SESSION['username']; ?></td>
-            <td><?php echo $_SESSION['question']; ?></td>
-            <td><?php echo $_SESSION['answer']; ?></td>
-        </tr>
-    </table>
-
-    <hr />
-
-    <!-- CORP DE PAGE -->
-    <p class='consigne'>Utiliser le formulaire ci-dessous si vous voulez modifier vos informations :</p>
-
-    <form action="traitement_update.php" method="POST">
-        <p><label>prenom : </label><input type="text" name="prenom" /></p>
-        <p><label>nom : </label><input type="text" name="nom" /></p>
-        <p><label>username : </label><input type="text" name="nom_utilisateur" /></p>
-        <p><label> Question : </label>
-            <select name="question">
-                <option>Nom de Votre meilleur amis d'enfance ?</option>
-                <option>Dans quelle ville avez-vous grandit ?</option>
-                <option>Nom de votre premiere copine ?</option>
-                <option>Marque de votre premiere voiture ?</option>
-            </select></p>
-        <p><label>reponse : </label><input type="text" name="reponse" /></p>
-        <p><label>New password : </label><input type="password" name="mp" /></p>
-        <p><label>New password confirmation : </label><input type="password" name="mp_verify" /></p>
-        <p><input type="submit" value="Modifier" /></p>
-
-        <hr />
-        <!-- LIEN POUR REVENIR A L'ACCUEIL -->
-
-        <p><a href="page_accueil.php">Revenir a la page d'accueil</a></p>
+    <!--    Mentions legales et Contact-->
+    <footer>
+        <p>|Mentions legales|</p>
+        <p><a href="contact.php">Contact</a></p>
+        <p>|</p>
+    </footer>
 
 </body>
 

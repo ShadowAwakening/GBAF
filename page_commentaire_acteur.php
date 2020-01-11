@@ -5,7 +5,7 @@ session_start();
 
 // Essaie de se connecter a la BDD
 try {
-    $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+    require "config.php";
 
     // Stop le processus et affiche l'erreur si pblm de connexion a la BDD
 } catch (Exception $e) {
@@ -72,7 +72,7 @@ if (isset($_POST['envoyer_commentaire'])) {
 }
 
 // Creer $commentaires qui contient toute les donnees de la table commentaires qui correspond a $_GET['id'] et donc a l'article courant ...
-$commentaires = $bdd->prepare('SELECT * FROM commentaires WHERE id_article = ? ORDER BY id DESC LIMIT 0, 5');
+$commentaires = $bdd->prepare('SELECT prenom_membre, commentaire, id_article, DATE_FORMAT(date_commentaire, "%d %b %Y %h:%i:%s") AS nouvelledate FROM commentaires WHERE id_article = ? ORDER BY id DESC LIMIT 0, 5');
 $commentaires->execute(array($getidentifiant));
 ?>
 
@@ -84,9 +84,9 @@ $commentaires->execute(array($getidentifiant));
 <head>
     <meta charset="utf-8">
 
-    <title>Extranet Groupement Banquaire et Assurance Francaise</title>
+    <title>Page de commentaires GBAF</title>
     <meta name="description" content="Page des commentaires de l'extranet du Groupement Banque et Assurance Francaise">
-    <link rel="stylesheet" href="style_page_commentaire_acteur.css">
+    <link rel="stylesheet" href="style.css"> 
 
 
 </head>
@@ -143,7 +143,7 @@ $commentaires->execute(array($getidentifiant));
 
     <div id="commentaire_list">
         <p><strong><?= $commentaire['prenom_membre']  ?>:</strong></p>
-        <p><?= $commentaire['date_commentaire'] ?></p>
+        <p><?= $commentaire['nouvelledate'] ?></p>
         <p><?= $commentaire['commentaire'] ?></p>
     </div>
 

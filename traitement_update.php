@@ -6,7 +6,7 @@ function modification($identifiant, $valeur){
             $id = $_SESSION['id'];
             // CONNEXION A LA BDD
             try {
-                $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+                require "config.php";
             // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
             } catch (Exception $e) {
                 die('Erreur : ' . $e->getMessage());
@@ -22,7 +22,7 @@ function modification($identifiant, $valeur){
 ?>
 <!-- JAVASCRIPT QUI AFFICHE QUE L'INSCRIPTION C'EST DEROULEE AVEC SUCCEE ET RENVOI A LA PAGE LOGIN -->
 <script type="text/javascript">
-    alert('Operation reussi, vos donnees on bien ete modifie !');
+    alert('Opération réussi, vos données ont bien été modifiée !');
     window.location.href = "page_accueil.php";
 </script>
 
