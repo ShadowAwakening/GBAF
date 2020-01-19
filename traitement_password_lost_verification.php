@@ -1,14 +1,16 @@
 <?php 
 
 if(!empty($_POST['nom_utilisateur']) && !empty($_POST['reponse'])){
-    // CONNEXION A LA BDD
-    try {
-        require "config.php";
-    // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
-    } catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
+            // CONNEXION A LA BDD
+    require "config.php";
 
+    try {
+        $bdd = new PDO("mysql:host=$serverName;dbname=$database", $usernameDb, $passDb);
+        
+            // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
+        } catch (Exception $e) {
+            die('Erreur : ' . $e->getMessage());
+        }
     session_start();
     
     $username = $_POST['nom_utilisateur'];

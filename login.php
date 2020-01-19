@@ -7,13 +7,15 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp'])) {
     if (!empty($_POST['nom_utilisateur']) && !empty($_POST['mp'])) {
 
             // CONNEXION A LA BDD
-            try {
+            require "config.php";
 
-                require "config.php";
-            // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
-            } catch (Exception $e) {
-                die('Erreur : ' . $e->getMessage());
-            }
+            try {
+                $bdd = new PDO("mysql:host=$serverName;dbname=$database", $usernameDb, $passDb);
+                
+                 // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
+                } catch (Exception $e) {
+                    die('Erreur : ' . $e->getMessage());
+                }
 
             // STOCK
             $nom_utilisateur = htmlspecialchars($_POST['nom_utilisateur']);

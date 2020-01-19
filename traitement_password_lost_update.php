@@ -6,11 +6,13 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_
     if ($_POST['mp'] == $_POST['mp_verify']) {
 
 
-        // ESSAIE DE SE CONNECTER A LA BDD
-        try {
-            require "config.php";
+    // CONNEXION A LA BDD
+    require "config.php";
 
-            // STOP LE PROCESSUS ET AFFICHE L'ERREUR S'IL Y A UN PBLM DE CONNEXION A LA BDD
+    try {
+        $bdd = new PDO("mysql:host=$serverName;dbname=$database", $usernameDb, $passDb);
+        
+            // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
         } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
         }

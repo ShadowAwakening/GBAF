@@ -3,14 +3,16 @@ session_start();
 
 // ARTICLES
 
-// Essaie de se connecter a la BDD
-try {
-    require "config.php";
+// CONNEXION A LA BDD
+require "config.php";
 
-    // Stop le processus et affiche l'erreur si pblm de connexion a la BDD
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
+try {
+    $bdd = new PDO("mysql:host=$serverName;dbname=$database", $usernameDb, $passDb);
+    
+        // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
+    } catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
 
 // Verifie que $_GET['id'] est present
 if (isset($_GET['id']) and !empty($_GET['id'])) {

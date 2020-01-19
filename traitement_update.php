@@ -5,12 +5,15 @@ function modification($identifiant, $valeur){
             session_start();
             $id = $_SESSION['id'];
             // CONNEXION A LA BDD
+            require "config.php";
+
             try {
-                require "config.php";
-            // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
-            } catch (Exception $e) {
-                die('Erreur : ' . $e->getMessage());
-            }
+                $bdd = new PDO("mysql:host=$serverName;dbname=$database", $usernameDb, $passDb);
+                
+                 // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
+                } catch (Exception $e) {
+                    die('Erreur : ' . $e->getMessage());
+                }
             
             // REQUETE PREPARE : PREPARATION ($req n'est pas une variable mais un objet ...)
            
