@@ -8,14 +8,8 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp'])) {
 
             // CONNEXION A LA BDD
             require "config.php";
+            $bdd = new Config();
 
-            try {
-                $bdd = new PDO("mysql:host=$serverName;dbname=$database", $usernameDb, $passDb);
-                
-                 // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
-                } catch (Exception $e) {
-                    die('Erreur : ' . $e->getMessage());
-                }
 
             // STOCK
             $nom_utilisateur = htmlspecialchars($_POST['nom_utilisateur']);
@@ -27,6 +21,7 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp'])) {
             $req->execute(array(
                 'username' => $nom_utilisateur
             ));
+
 
             // STOCK LES RESULTATS DE LA REQUETE LIGNE PAR LIGNE DANS UN ARRAY -> ici $resultats
             $resultat = $req->fetch();

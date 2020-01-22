@@ -2,17 +2,9 @@
 session_start();
 
 // ARTICLES
-
 // CONNEXION A LA BDD
 require "config.php";
-
-try {
-    $bdd = new PDO("mysql:host=$serverName;dbname=$database", $usernameDb, $passDb);
-    
-        // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
-    } catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
+$bdd = new Config();
 
 // Verifie que $_GET['id'] est present
 if (isset($_GET['id']) and !empty($_GET['id'])) {

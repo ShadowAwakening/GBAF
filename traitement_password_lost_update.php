@@ -6,16 +6,9 @@ if (isset($_POST['nom_utilisateur']) && isset($_POST['mp']) && isset($_POST['mp_
     if ($_POST['mp'] == $_POST['mp_verify']) {
 
 
-    // CONNEXION A LA BDD
-    require "config.php";
-
-    try {
-        $bdd = new PDO("mysql:host=$serverName;dbname=$database", $usernameDb, $passDb);
-        
-            // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
-        } catch (Exception $e) {
-            die('Erreur : ' . $e->getMessage());
-        }
+// CONNEXION A LA BDD
+require "config.php";
+$bdd = new Config();
 
         $username = htmlspecialchars($_POST['nom_utilisateur']);
         $mp = password_hash($_POST['mp'], PASSWORD_DEFAULT);

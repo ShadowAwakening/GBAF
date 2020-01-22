@@ -11,15 +11,8 @@ if (isset($_POST['prenom']) && isset($_POST['nom']) && isset($_POST['nom_utilisa
 
             // CONNEXION A LA BDD
             require "config.php";
-
-            try {
-                $bdd = new PDO("mysql:host=$serverName;dbname=$database", $usernameDb, $passDb);
-                
-                 // PRINT L'ERREUR ET STOP LE PROCESSUS SI ECHEC
-                } catch (Exception $e) {
-                    die('Erreur : ' . $e->getMessage());
-                }
-
+            $bdd = new Config();
+            
             // STOCK LES DONNEES ENVOYEES PAR LE FORMULAIRE DANS DES VARIABLES APPROPRIEES ET SECURISE LES DONNEES GRACE A LA FONCTION HTMLSPECIALCHARS
             $prenom = htmlspecialchars($_POST['prenom']);
             $nom = htmlspecialchars($_POST['nom']);
