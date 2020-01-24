@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['id']) || empty ($_SESSION['id'])){
+    header("location: login.php");
+}
+
 // ARTICLES
 // CONNEXION A LA BDD
 require "config.php";
